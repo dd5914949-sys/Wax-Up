@@ -1,42 +1,436 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Service Menu | [Studio Name]</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="assets/css/landing.css" />
-	</head>
-	<body>
-		<header id="header">
-			<a href="index.html" class="logo"><strong>[Studio Name]</strong></a>
-		</header>
+<html lang="en">
+<head>
+  <title>Services &amp; Pricing | Velour Studio Chicago</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="Velour Studio full waxing menu. Transparent pricing for Brazilian, Bikini, Body, and Facial waxing in Chicago, Illinois." />
 
-		<section id="banner" class="menu-banner">
-			<div class="inner">
-				<h1>Our Services</h1>
-				<p>Transparent pricing. Superior technique.</p>
-			</div>
-		</section>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;600;700&family=Lato:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 
-		<div id="main" class="menu-container">
-			<section class="service-block">
-				<h2>The Brazilian Specialist</h2>
-				<p>Premium hard wax to minimize discomfort. Fast and sterile.</p>
-				<span class="price">$65 | 30 Mins</span>
-				<button class="book-btn" data-service="brazilian">Book Now</button>
-			</section>
-            
-			<section class="service-block">
-				<h2>Full Leg Smooth</h2>
-				<p>From ankle to thigh. Includes botanical hydration oil.</p>
-				<span class="price">$80 | 45 Mins</span>
-				<button class="book-btn" data-service="legs">Book Now</button>
-			</section>
-		</div>
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
 
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/landing.js"></script>
-	</body>
+  <!-- ========= SHARED HEADER ========= -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">V</span>
+        <span class="logo-text">Velour <em>Studio</em></span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="landing.html" class="nav-link active">Services</a>
+        <a href="generic.html" class="nav-link">Our Standards</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <a href="https://your-booking-link.com" class="btn-book" target="_blank" rel="noopener">Book Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="landing.html">Services</a>
+      <a href="generic.html">Our Standards</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="https://your-booking-link.com" class="mobile-book">Book Now</a>
+    </nav>
+  </header>
+
+  <!-- ========= PAGE BANNER ========= -->
+  <section id="menu-banner">
+    <div class="banner-inner">
+      <p class="section-tag">Full Menu</p>
+      <h1>Services &amp; Pricing.</h1>
+      <p class="banner-sub">Transparent pricing. Grouped by area. No surprises, ever.<br>All services use premium hard wax and single-use applicators.</p>
+    </div>
+  </section>
+
+  <!-- ========= QUICK NAV ========= -->
+  <div class="category-nav">
+    <div class="category-nav-inner">
+      <a href="#intimate" class="cat-pill active">Intimate</a>
+      <a href="#body" class="cat-pill">Body &amp; Limbs</a>
+      <a href="#face" class="cat-pill">Face &amp; Brows</a>
+      <a href="#bundles" class="cat-pill">Bundles</a>
+    </div>
+  </div>
+
+  <!-- ========= MAIN CONTENT ========= -->
+  <main id="main-content">
+
+    <!-- INTIMATE SERVICES -->
+    <section class="service-category" id="intimate">
+      <div class="category-inner">
+        <div class="category-header-img">
+          <img src="images/intimate.jpg" alt="Intimate waxing — Brazilian and Bikini specialist at Velour Studio Chicago" loading="lazy" />
+          <div class="cat-img-overlay">
+            <span>The Brazilian Specialist</span>
+          </div>
+        </div>
+        <div class="category-content">
+          <div class="category-title-block">
+            <p class="section-tag">Category 01</p>
+            <h2>Intimate</h2>
+            <p class="category-desc">Our most-requested services. Premium hard wax exclusively. Fast, precise, and pain-managed. We specialize in Brazilian because it demands the highest standard.</p>
+          </div>
+          <div class="service-list">
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Full Brazilian</h3>
+                <p>Complete removal — front, back, everything in between.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$65</span>
+                <span class="duration">30 min</span>
+                <button class="book-btn" data-service="full-brazilian">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Brazilian Maintenance</h3>
+                <p>For return clients within 4–6 weeks. Faster &amp; less discomfort.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$55</span>
+                <span class="duration">20 min</span>
+                <button class="book-btn" data-service="brazilian-maintenance">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Bikini Line</h3>
+                <p>Classic cleanup — outside the underwear line.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$35</span>
+                <span class="duration">15 min</span>
+                <button class="book-btn" data-service="bikini-line">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Extended Bikini</h3>
+                <p>More coverage than a standard line, less than a full Brazilian.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$48</span>
+                <span class="duration">20 min</span>
+                <button class="book-btn" data-service="extended-bikini">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Butt Strip / Cheeks</h3>
+                <p>Can be added to any Brazilian service.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$20</span>
+                <span class="duration">10 min</span>
+                <button class="book-btn" data-service="butt-strip">Book</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BODY & LIMBS -->
+    <section class="service-category alt-bg" id="body">
+      <div class="category-inner reverse">
+        <div class="category-header-img">
+          <img src="images/body.jpg" alt="Body and leg waxing at Velour Studio Chicago" loading="lazy" />
+          <div class="cat-img-overlay">
+            <span>Smooth Skin, Head to Toe</span>
+          </div>
+        </div>
+        <div class="category-content">
+          <div class="category-title-block">
+            <p class="section-tag">Category 02</p>
+            <h2>Body &amp; Limbs</h2>
+            <p class="category-desc">From full legs to underarms. All body services include a botanical hydration oil finish to calm and nourish freshly waxed skin.</p>
+          </div>
+          <div class="service-list">
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Full Legs</h3>
+                <p>Ankle to upper thigh. Includes botanical oil finish.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$80</span>
+                <span class="duration">45 min</span>
+                <button class="book-btn" data-service="full-legs">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Half Legs (Lower)</h3>
+                <p>Ankle to knee.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$45</span>
+                <span class="duration">25 min</span>
+                <button class="book-btn" data-service="half-legs-lower">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Half Legs (Upper)</h3>
+                <p>Knee to upper thigh.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$45</span>
+                <span class="duration">25 min</span>
+                <button class="book-btn" data-service="half-legs-upper">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Underarms</h3>
+                <p>Fast, effective. Eliminates stubble entirely.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$25</span>
+                <span class="duration">15 min</span>
+                <button class="book-btn" data-service="underarms">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Full Arms</h3>
+                <p>Wrist to shoulder.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$55</span>
+                <span class="duration">30 min</span>
+                <button class="book-btn" data-service="full-arms">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Half Arms</h3>
+                <p>Wrist to elbow.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$35</span>
+                <span class="duration">20 min</span>
+                <button class="book-btn" data-service="half-arms">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Stomach / Abdomen</h3>
+                <p>Belly to bikini line.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$35</span>
+                <span class="duration">20 min</span>
+                <button class="book-btn" data-service="stomach">Book</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACE & BROWS -->
+    <section class="service-category" id="face">
+      <div class="category-inner">
+        <div class="category-header-img">
+          <img src="images/face.jpg" alt="Facial waxing and brow shaping at Velour Studio Chicago" loading="lazy" />
+          <div class="cat-img-overlay">
+            <span>Defined, Precise, Polished</span>
+          </div>
+        </div>
+        <div class="category-content">
+          <div class="category-title-block">
+            <p class="section-tag">Category 03</p>
+            <h2>Face &amp; Brows</h2>
+            <p class="category-desc">Precision shaping for the most visible part of you. We use low-temperature hard wax on all facial services to protect delicate skin.</p>
+          </div>
+          <div class="service-list">
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Brow Shaping</h3>
+                <p>Custom shaping to your bone structure. Our most popular facial service.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$22</span>
+                <span class="duration">15 min</span>
+                <button class="book-btn" data-service="brow-shaping">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Brow Tint + Shape</h3>
+                <p>Adds depth and definition. Shape &amp; tint in one session.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$38</span>
+                <span class="duration">25 min</span>
+                <button class="book-btn" data-service="brow-tint-shape">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Upper Lip</h3>
+                <p>Quick, effective. Virtually painless with our technique.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$15</span>
+                <span class="duration">10 min</span>
+                <button class="book-btn" data-service="upper-lip">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Chin</h3>
+                <p>Targeted precision on stubborn chin hair.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$15</span>
+                <span class="duration">10 min</span>
+                <button class="book-btn" data-service="chin">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Full Face</h3>
+                <p>Brows, upper lip, chin, cheeks, and forehead hairline.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$55</span>
+                <span class="duration">35 min</span>
+                <button class="book-btn" data-service="full-face">Book</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Sideburns</h3>
+                <p>Clean the sides for a polished jawline frame.</p>
+              </div>
+              <div class="service-meta">
+                <span class="price">$18</span>
+                <span class="duration">10 min</span>
+                <button class="book-btn" data-service="sideburns">Book</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUNDLES -->
+    <section class="service-category alt-bg" id="bundles">
+      <div class="bundles-inner">
+        <div class="category-title-block centered">
+          <p class="section-tag">Category 04</p>
+          <h2>Bundles &amp; Packages</h2>
+          <p class="category-desc">Combine services and save. Designed to reduce decision fatigue and reward loyal clients.</p>
+        </div>
+        <div class="bundles-grid">
+          <div class="bundle-card featured">
+            <div class="bundle-badge">Most Popular</div>
+            <h3>The Essentials</h3>
+            <p class="bundle-desc">Full Brazilian + Brow Shape</p>
+            <ul class="bundle-includes">
+              <li>Full Brazilian Wax</li>
+              <li>Custom Brow Shaping</li>
+              <li>Post-wax soothing treatment</li>
+            </ul>
+            <div class="bundle-pricing">
+              <span class="bundle-was">$87</span>
+              <span class="bundle-now">$75</span>
+            </div>
+            <button class="book-btn large" data-service="bundle-essentials">Book This Bundle</button>
+          </div>
+          <div class="bundle-card">
+            <h3>Smooth All Over</h3>
+            <p class="bundle-desc">Full Legs + Underarms</p>
+            <ul class="bundle-includes">
+              <li>Full Leg Wax (ankle to thigh)</li>
+              <li>Underarm Wax</li>
+              <li>Botanical oil finish</li>
+            </ul>
+            <div class="bundle-pricing">
+              <span class="bundle-was">$105</span>
+              <span class="bundle-now">$90</span>
+            </div>
+            <button class="book-btn large" data-service="bundle-smooth">Book This Bundle</button>
+          </div>
+          <div class="bundle-card">
+            <h3>The Full Works</h3>
+            <p class="bundle-desc">Brazilian + Full Legs + Brows</p>
+            <ul class="bundle-includes">
+              <li>Full Brazilian Wax</li>
+              <li>Full Leg Wax</li>
+              <li>Custom Brow Shaping</li>
+              <li>Post-wax treatment</li>
+            </ul>
+            <div class="bundle-pricing">
+              <span class="bundle-was">$167</span>
+              <span class="bundle-now">$140</span>
+            </div>
+            <button class="book-btn large" data-service="bundle-full-works">Book This Bundle</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========= PAGE CTA ========= -->
+  <section id="landing-cta">
+    <div class="landing-cta-inner">
+      <h2>Ready to Book?</h2>
+      <p>Online booking in 60 seconds. Or text us — 70% of our clients prefer it.</p>
+      <div class="cta-actions">
+        <a href="https://your-booking-link.com" class="btn-primary large" target="_blank" rel="noopener">Book Online →</a>
+        <a href="sms:+13125550100" class="btn-outline-light">Text Us: (312) 555-0100</a>
+      </div>
+      <p class="cta-note">All services include consultation. First-timers always welcome.</p>
+    </div>
+  </section>
+
+  <!-- ========= FOOTER ========= -->
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">V</span>
+          <span class="logo-text">Velour <em>Studio</em></span>
+        </a>
+        <p>Precision waxing for the modern Chicago woman.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="landing.html">Services &amp; Pricing</a>
+        <a href="generic.html">Hygiene Standards</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-info">
+        <h4>Contact</h4>
+        <a href="tel:+13125550100">(312) 555-0100</a>
+        <a href="mailto:hello@velourstudio.com">hello@velourstudio.com</a>
+        <p>Chicago, Illinois</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Velour Studio. All rights reserved. · Illinois Licensed Esthetician</p>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile CTA -->
+  <a href="https://your-booking-link.com" class="fab-book" target="_blank" rel="noopener" aria-label="Book Now">
+    <span>Book</span>
+  </a>
+
+  <script src="landing.js"></script>
+</body>
 </html>

@@ -1,44 +1,282 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Precision Waxing Chicago | [Studio Name]</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&family=Lato:ital@1&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="assets/css/index.css" />
-	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<header id="header" class="alt">
-				<a href="index.html" class="logo"><strong>[Studio Name]</strong> <span>Chicago, IL</span></a>
-				<nav><a href="landing.html">Menu</a></nav>
-			</header>
+<html lang="en">
+<head>
+  <title>Velour Studio | Precision Waxing Chicago</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="Chicago's most trusted waxing studio. Sanitary, pain-conscious, professional. Brazilian, full-body, facial waxing near you in Illinois." />
 
-			<section id="banner" class="major">
-				<div class="inner">
-					<header class="major"><h1>Precision Waxing for the Modern Chicago Woman.</h1></header>
-					<div class="content">
-						<p>Sanitized. Professional. Pain-conscious.</p>
-						<a href="#booking" class="button next" id="hero-book-btn">Book Your Glow-Up</a>
-					</div>
-				</div>
-			</section>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;600;700&family=Lato:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 
-			<div id="main">
-				<section id="one" class="tiles">
-					<article>
-						<span class="image"><img src="images/intimate.jpg" alt="Intimate Waxing" /></span>
-						<header class="major"><h3><a href="landing.html" class="link">Intimate</a></h3></header>
-					</article>
-					<article>
-						<span class="image"><img src="images/face.jpg" alt="Face Waxing" /></span>
-						<header class="major"><h3><a href="landing.html" class="link">Face & Brows</a></h3></header>
-					</article>
-				</section>
-			</div>
-		</div>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body class="is-preload">
 
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/index.js"></script> </body>
+  <!-- ========= STICKY HEADER ========= -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">V</span>
+        <span class="logo-text">Velour <em>Studio</em></span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="landing.html" class="nav-link">Services</a>
+        <a href="generic.html" class="nav-link">Our Standards</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <a href="https://your-booking-link.com" class="btn-book" target="_blank" rel="noopener">Book Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile nav drawer -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="landing.html">Services</a>
+      <a href="generic.html">Our Standards</a>
+      <a href="#contact">Contact</a>
+      <a href="https://your-booking-link.com" class="mobile-book">Book Now</a>
+    </nav>
+  </header>
+
+  <!-- ========= HERO ========= -->
+  <section id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Chicago, Illinois · Est. 2024</p>
+      <h1>Precision Waxing<br><em>for the Modern<br>Chicago Woman.</em></h1>
+      <p class="hero-sub">Sanitized. Professional. Pain-conscious.</p>
+      <div class="hero-actions">
+        <a href="https://your-booking-link.com" class="btn-primary" target="_blank" rel="noopener">Book Your Appointment</a>
+        <a href="landing.html" class="btn-outline">View Services &amp; Pricing</a>
+      </div>
+      <div class="hero-trust-bar">
+        <span>★★★★★ 4.9 / 5</span>
+        <span class="divider">·</span>
+        <span>200+ Chicago Women</span>
+        <span class="divider">·</span>
+        <span>No Double-Dipping Policy</span>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========= SERVICE CATEGORIES (Tiles) ========= -->
+  <section id="services">
+    <div class="section-intro">
+      <p class="section-tag">What We Do</p>
+      <h2>Expert Waxing, Every Area.</h2>
+      <p class="section-sub">One high-quality photo per category — because clarity earns trust.</p>
+    </div>
+    <div class="tiles-grid">
+      <article class="tile" data-category="intimate">
+        <div class="tile-img-wrap">
+          <img src="images/intimate.jpg" alt="Intimate waxing — Brazilian and Bikini specialist" loading="lazy" />
+          <div class="tile-overlay">
+            <a href="landing.html#intimate" class="tile-link">Explore →</a>
+          </div>
+        </div>
+        <div class="tile-body">
+          <h3>Intimate</h3>
+          <p>Brazilian &amp; Bikini Specialist</p>
+          <span class="tile-from">From $55</span>
+        </div>
+      </article>
+      <article class="tile" data-category="body">
+        <div class="tile-img-wrap">
+          <img src="images/body.jpg" alt="Body and leg waxing" loading="lazy" />
+          <div class="tile-overlay">
+            <a href="landing.html#body" class="tile-link">Explore →</a>
+          </div>
+        </div>
+        <div class="tile-body">
+          <h3>Body &amp; Limbs</h3>
+          <p>Smooth skin from head to toe</p>
+          <span class="tile-from">From $25</span>
+        </div>
+      </article>
+      <article class="tile" data-category="face">
+        <div class="tile-img-wrap">
+          <img src="images/face.jpg" alt="Facial waxing and brow shaping" loading="lazy" />
+          <div class="tile-overlay">
+            <a href="landing.html#face" class="tile-link">Explore →</a>
+          </div>
+        </div>
+        <div class="tile-body">
+          <h3>Face &amp; Brows</h3>
+          <p>Precision shaping, defined arches</p>
+          <span class="tile-from">From $15</span>
+        </div>
+      </article>
+    </div>
+    <div class="tiles-cta">
+      <a href="landing.html" class="btn-primary">See Full Menu &amp; Pricing</a>
+    </div>
+  </section>
+
+  <!-- ========= HYGIENE PROMISE ========= -->
+  <section id="promise">
+    <div class="promise-inner">
+      <div class="promise-header">
+        <p class="section-tag">Why Velour</p>
+        <h2>Our Non-Negotiable Standard.</h2>
+        <p class="section-sub">We built our entire practice around the three fears every woman has before her first wax.</p>
+      </div>
+      <div class="promise-grid">
+        <div class="promise-card reveal-card">
+          <div class="promise-icon">✦</div>
+          <h3>No Double-Dipping. Ever.</h3>
+          <p>A fresh, single-use applicator is used for every single dip into our wax pots. Zero cross-contamination. Zero exceptions. This is our most fundamental rule.</p>
+          <a href="generic.html" class="learn-more-link">See our full hygiene standards →</a>
+        </div>
+        <div class="promise-card reveal-card">
+          <div class="promise-icon">✦</div>
+          <h3>Premium Hard Wax Only.</h3>
+          <p>For sensitive and intimate areas, we use professional-grade hard wax exclusively. It shrink-wraps the hair — not your skin — delivering less trauma and dramatically reduced redness.</p>
+          <a href="generic.html" class="learn-more-link">Why hard wax matters →</a>
+        </div>
+        <div class="promise-card reveal-card">
+          <div class="promise-icon">✦</div>
+          <h3>Pain-Conscious Technique.</h3>
+          <p>Skin is held taut, wax applied at the precise angle, removed in one swift motion. Our technique is studied, not improvised. We also offer numbing topicals on request.</p>
+          <a href="generic.html" class="learn-more-link">Our technique explained →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= MEET YOUR WAXER ========= -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-image">
+        <img src="images/waxer.jpg" alt="Lead esthetician at Velour Studio Chicago" loading="lazy" />
+      </div>
+      <div class="about-text">
+        <p class="section-tag">Your Esthetician</p>
+        <h2>You'll know exactly<br>who you're trusting.</h2>
+        <p>Research shows that photos of the actual provider — not stock models — increase trust by 48%. That's why we introduce ourselves here, not hide behind a logo.</p>
+        <p>Hi, I'm <strong>[Your Name]</strong> — licensed Illinois esthetician, Brazilian specialist, and the only person who will ever work on you at Velour. Consistency, discretion, and results are what I stand for.</p>
+        <p><em>Over 200 five-star appointments and counting.</em></p>
+        <a href="https://your-booking-link.com" class="btn-primary" target="_blank" rel="noopener">Book with Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= TESTIMONIALS ========= -->
+  <section id="reviews">
+    <div class="reviews-inner">
+      <div class="reviews-header">
+        <p class="section-tag">Social Proof</p>
+        <h2>What Chicago Women Are Saying.</h2>
+        <p class="rating-badge">★★★★★ <strong>4.9</strong> average · 200+ reviews</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>"I was so nervous for my first Brazilian but she made me feel completely comfortable and at ease. The pain was minimal — nothing like what I expected. I won't go anywhere else."</blockquote>
+          <cite><strong>Aaliyah R.</strong> · Lincoln Park, Chicago</cite>
+        </div>
+        <div class="review-card reveal-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>"The studio is immaculate. She explained every step before doing it and I could see she was using fresh applicators every single time. I've been coming monthly for six months."</blockquote>
+          <cite><strong>Maria S.</strong> · Wicker Park, Chicago</cite>
+        </div>
+        <div class="review-card reveal-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>"As someone with very sensitive skin, I've had bad reactions before. Zero redness here. The hard wax made all the difference. Highly recommend to any woman in the Chicago area."</blockquote>
+          <cite><strong>Jessica T.</strong> · Gold Coast, Chicago</cite>
+        </div>
+        <div class="review-card reveal-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>"I appreciate that she's direct about pricing, what's included, and how long it takes. No surprises. It's the most professional waxing experience I've had in the city."</blockquote>
+          <cite><strong>Danielle M.</strong> · Bucktown, Chicago</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= CONTACT ========= -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <p class="section-tag">Find Us</p>
+        <h2>Ready to Book?</h2>
+        <p>70% of women prefer texting over calling — so we made it easy. Reach out however you're most comfortable.</p>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <span class="method-label">Text or Call</span>
+            <a href="tel:+13125550100" class="method-value">(312) 555-0100</a>
+          </div>
+          <div class="contact-method">
+            <span class="method-label">Email</span>
+            <a href="mailto:hello@velourstudio.com" class="method-value">hello@velourstudio.com</a>
+          </div>
+          <div class="contact-method">
+            <span class="method-label">Location</span>
+            <span class="method-value">Chicago, Illinois<br><em>(Exact address provided on booking)</em></span>
+          </div>
+          <div class="contact-method">
+            <span class="method-label">Hours</span>
+            <span class="method-value">Mon–Sat: 9am – 7pm<br>Sun: 10am – 4pm</span>
+          </div>
+        </div>
+        <a href="https://your-booking-link.com" class="btn-primary large" target="_blank" rel="noopener">Book Your Appointment →</a>
+      </div>
+      <div class="contact-map">
+        <!-- Replace with actual Google Maps embed -->
+        <div class="map-placeholder">
+          <div class="map-pin">📍</div>
+          <p>Chicago, Illinois</p>
+          <p><em>Exact address sent<br>upon booking confirmation</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= FOOTER ========= -->
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">V</span>
+          <span class="logo-text">Velour <em>Studio</em></span>
+        </a>
+        <p>Precision waxing for the modern Chicago woman. Sanitary. Professional. Pain-conscious.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="landing.html">Services &amp; Pricing</a>
+        <a href="generic.html">Hygiene Standards</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Along</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="TikTok">TikTok</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+        </div>
+        <p class="footer-note">Illinois Licensed Esthetician<br>Chicago, IL · Est. 2024</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Velour Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile Book Button -->
+  <a href="https://your-booking-link.com" class="fab-book" id="fabBook" target="_blank" rel="noopener" aria-label="Book Now">
+    <span>Book</span>
+  </a>
+
+  <script src="index.js"></script>
+</body>
 </html>
