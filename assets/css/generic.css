@@ -1,0 +1,5 @@
+body { font-family: 'Montserrat', sans-serif; background-color: #FAF9F6; margin: 0; color: #1C1C1C; }
+h1, h3 { font-family: 'Playfair Display', serif; color: #2D4F1E; }
+.hygiene-container { max-width: 800px; margin: 0 auto; padding: 4em 2em; }
+.intro { font-size: 1.2em; line-height: 1.6; border-left: 4px solid #2D4F1E; padding-left: 15px; margin-bottom: 2em; }
+.info-card { background: white; padding: 2em; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 1.5em; }

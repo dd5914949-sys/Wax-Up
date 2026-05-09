@@ -1,0 +1,8 @@
+body { font-family: 'Montserrat', sans-serif; margin: 0; background-color: #FAF9F6; color: #1C1C1C; }
+h1, h2 { font-family: 'Playfair Display', serif; }
+.menu-banner { background-color: #E8F3E8; text-align: center; padding: 4em 2em; }
+.menu-container { max-width: 800px; margin: 0 auto; padding: 2em; }
+.service-block { border-bottom: 1px solid #ddd; padding: 2em 0; }
+.price { display: block; font-weight: bold; color: #2D4F1E; margin: 1em 0; font-size: 1.2em; }
+.book-btn { background: transparent; border: 2px solid #2D4F1E; color: #2D4F1E; padding: 10px 20px; cursor: pointer; transition: all 0.3s ease; font-family: 'Montserrat'; font-weight: bold; }
+.book-btn:hover { background: #2D4F1E; color: white; }

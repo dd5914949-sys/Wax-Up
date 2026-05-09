@@ -1,69 +1,42 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Our Services | [Studio Name]</title>
+		<title>Service Menu | [Studio Name]</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/custom.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/landing.css" />
 	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<header id="header" class="alt style2">
-				<a href="index.html" class="logo"><strong>[Studio Name]</strong></a>
-				<nav><a href="#menu">Menu</a></nav>
-			</header>
+	<body>
+		<header id="header">
+			<a href="index.html" class="logo"><strong>[Studio Name]</strong></a>
+		</header>
 
-			<section id="banner" class="style2">
-				<div class="inner">
-					<header class="major"><h1>Service Menu</h1></header>
-					<div class="content"><p>Expert technique. Transparent pricing. <br />Specializing in sensitive skin and first-time appointments.</p></div>
-				</div>
-			</section>
-
-			<div id="main">
-				<section id="one">
-					<div class="inner">
-						<header class="major"><h2>The Essentials</h2></header>
-						<p>Each service includes a thorough consultation and a custom post-wax soothing treatment to protect your skin against the Chicago elements.</p>
-					</div>
-				</section>
-
-				<section id="two" class="spotlights">
-					<section>
-						<a href="#" class="image"><img src="images/brazilian.jpg" alt="Brazilian Wax" data-position="center center" /></a>
-						<div class="content">
-							<div class="inner">
-								<header class="major"><h3>The Brazilian Specialist</h3></header>
-								<p>Using premium hard wax to minimize discomfort, our signature Brazilian wax is thorough, fast, and sterile. <br /><strong>Duration: 30 mins | Price: $65</strong></p>
-								<ul class="actions"><li><a href="#" class="button">Book Now</a></li></ul>
-							</div>
-						</div>
-					</section>
-					<section>
-						<a href="#" class="image"><img src="images/legs.jpg" alt="Leg Waxing" data-position="top center" /></a>
-						<div class="content">
-							<div class="inner">
-								<header class="major"><h3>Full Leg Smooth</h3></header>
-								<p>From ankle to thigh. We finish with a botanical hydration oil to prevent ingrowns and dryness. <br /><strong>Duration: 45 mins | Price: $80</strong></p>
-								<ul class="actions"><li><a href="#" class="button">Book Now</a></li></ul>
-							</div>
-						</div>
-					</section>
-				</section>
+		<section id="banner" class="menu-banner">
+			<div class="inner">
+				<h1>Our Services</h1>
+				<p>Transparent pricing. Superior technique.</p>
 			</div>
+		</section>
 
-			<footer id="footer">
-				<div class="inner">
-					<ul class="copyright"><li>&copy; [Studio Name]</li></ul>
-				</div>
-			</footer>
+		<div id="main" class="menu-container">
+			<section class="service-block">
+				<h2>The Brazilian Specialist</h2>
+				<p>Premium hard wax to minimize discomfort. Fast and sterile.</p>
+				<span class="price">$65 | 30 Mins</span>
+				<button class="book-btn" data-service="brazilian">Book Now</button>
+			</section>
+            
+			<section class="service-block">
+				<h2>Full Leg Smooth</h2>
+				<p>From ankle to thigh. Includes botanical hydration oil.</p>
+				<span class="price">$80 | 45 Mins</span>
+				<button class="book-btn" data-service="legs">Book Now</button>
+			</section>
 		</div>
 
 		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script src="assets/js/custom.js"></script>
+		<script src="assets/js/landing.js"></script>
 	</body>
 </html>
