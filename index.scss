@@ -1,0 +1,402 @@
+// =============================================
+// VELOUR STUDIO — index.scss
+// Compile with: sass index.scss index.css
+// =============================================
+
+// --- Variables ---
+$alabaster:       #FAF9F6;
+$blush:           #F4E1D2;
+$blush-deep:      #E8CBBB;
+$sage-light:      #E8F3E8;
+$forest:          #2D4F1E;
+$forest-hover:    #3D6B28;
+$charcoal:        #1C1C1C;
+$mid-gray:        #6B6B6B;
+$light-gray:      #B8B2AA;
+$border:          #E5DDD5;
+$white:           #FFFFFF;
+
+// --- Typography ---
+$font-heading:    'Playfair Display', Georgia, serif;
+$font-body:       'Montserrat', sans-serif;
+$font-micro:      'Lato', sans-serif;
+
+// --- Spacing ---
+$header-h:        72px;
+$section-pad:     6rem;
+$section-pad-mob: 4rem;
+$max-width:       1200px;
+
+// --- Border radius ---
+$radius-sm:  4px;
+$radius-md:  8px;
+$radius-lg:  16px;
+
+// --- Transitions ---
+$transition: 0.3s ease;
+
+// --- Shadows ---
+$shadow-card:  0 4px 24px rgba(28,28,28,0.07);
+$shadow-hover: 0 12px 40px rgba(28,28,28,0.13);
+
+// =============================================
+// MIXINS
+// =============================================
+
+@mixin section-padding {
+  padding: $section-pad 2rem;
+  @media (max-width: 768px) { padding: $section-pad-mob 1.5rem; }
+}
+
+@mixin max-container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+@mixin section-tag {
+  font-family: $font-micro;
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $forest;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+@mixin btn-base {
+  display: inline-block;
+  font-family: $font-body;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: $radius-sm;
+  transition: all $transition;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+// =============================================
+// BASE
+// =============================================
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: $font-body;
+  background: $alabaster;
+  color: $charcoal;
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img { display: block; width: 100%; height: auto; }
+a { text-decoration: none; color: inherit; }
+
+// =============================================
+// TYPOGRAPHY
+// =============================================
+
+h1, h2, h3, h4 { font-family: $font-heading; line-height: 1.15; }
+h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 700; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; }
+h3 { font-size: 1.25rem; font-weight: 700; }
+em { font-family: $font-heading; font-style: italic; font-weight: 400; }
+p  { font-size: 0.95rem; color: $mid-gray; line-height: 1.8; }
+
+.section-tag { @include section-tag; }
+
+.section-intro {
+  text-align: center;
+  margin-bottom: 3.5rem;
+
+  h2 { margin-bottom: 0.5rem; }
+  .section-sub { max-width: 520px; margin: 0.75rem auto 0; }
+}
+
+// =============================================
+// BUTTONS
+// =============================================
+
+.btn-primary {
+  @include btn-base;
+  background: $forest;
+  color: $white;
+  border: 2px solid $forest;
+
+  &:hover {
+    background: $forest-hover;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(45,79,30,0.3);
+  }
+
+  &.large { padding: 18px 40px; font-size: 0.9rem; }
+}
+
+.btn-outline {
+  @include btn-base;
+  background: transparent;
+  color: $charcoal;
+  border: 2px solid $charcoal;
+
+  &:hover {
+    background: $charcoal;
+    color: $white;
+    transform: translateY(-2px);
+  }
+}
+
+.btn-book {
+  @include btn-base;
+  background: $forest;
+  color: $white;
+  padding: 10px 22px;
+  border: none;
+
+  &:hover { background: $forest-hover; transform: translateY(-1px); }
+}
+
+// =============================================
+// HEADER
+// =============================================
+
+#site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(250,249,246,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $border;
+  transition: box-shadow $transition;
+
+  &.scrolled { box-shadow: 0 2px 20px rgba(28,28,28,0.08); }
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  @include max-container;
+  padding: 0 2rem;
+  height: $header-h;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+
+  &-mark {
+    width: 36px; height: 36px;
+    background: $forest;
+    color: $white;
+    font-family: $font-heading;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  &-text {
+    font-family: $font-heading;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $charcoal;
+    letter-spacing: 0.02em;
+
+    em { font-weight: 400; font-size: 0.95rem; }
+  }
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $mid-gray;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color $transition;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0; right: 0;
+    height: 1.5px;
+    background: $forest;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform $transition;
+  }
+
+  &:hover, &.active {
+    color: $charcoal;
+    &::after { transform: scaleX(1); }
+  }
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+
+  span {
+    display: block;
+    width: 24px; height: 2px;
+    background: $charcoal;
+    border-radius: 2px;
+    transition: all $transition;
+  }
+
+  &.open {
+    span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; }
+    span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: $white;
+  border-top: 1px solid $border;
+  padding: 1.5rem 2rem;
+  gap: 1.2rem;
+
+  &.open { display: flex; }
+
+  a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $charcoal;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $border;
+  }
+
+  .mobile-book {
+    background: $forest;
+    color: $white;
+    text-align: center;
+    padding: 14px;
+    border-radius: $radius-sm;
+    border: none;
+    margin-top: 0.5rem;
+  }
+}
+
+// =============================================
+// HERO
+// =============================================
+
+#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: $blush;
+  overflow: hidden;
+  padding-top: $header-h;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 50%, rgba(255,255,255,0.35) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 50% at 20% 80%, rgba(232,195,187,0.4) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  @include max-container;
+  padding: 5rem 2rem 4rem;
+  z-index: 1;
+}
+
+.hero-eyebrow {
+  @include section-tag;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.2s ease forwards;
+}
+
+#hero h1 {
+  color: $charcoal;
+  max-width: 680px;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.4s ease forwards;
+
+  em { color: $forest; }
+}
+
+.hero-sub {
+  font-family: $font-micro;
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  color: $mid-gray;
+  letter-spacing: 0.04em;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.55s ease forwards;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.7s ease forwards;
+}
+
+.hero-trust-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: $mid-gray;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.9s ease forwards;
+
+  .divider { color: $blush-deep; }
+}
+
+// =============================================
+// ANIMATIONS
+// =============================================
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 0.7; }
+}

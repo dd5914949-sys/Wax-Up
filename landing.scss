@@ -1,0 +1,317 @@
+// =============================================
+// VELOUR STUDIO — landing.scss
+// Services & Pricing Page
+// Compile with: sass landing.scss landing.css
+// =============================================
+
+@import 'index'; // Shared tokens (variables, mixins, base styles)
+
+// Additional landing-page-specific variables
+$gold: #C9A96B;
+
+
+// =============================================
+// PAGE BANNER
+// =============================================
+
+#menu-banner {
+  padding: 8rem 2rem 4rem;
+  background: $blush;
+  margin-top: $header-h;
+
+  h1 { margin-bottom: 1rem; }
+
+  .banner-sub {
+    font-size: 1rem;
+    max-width: 560px;
+    line-height: 1.7;
+    color: $mid-gray;
+  }
+
+  @media (max-width: 768px) {
+    padding: 6rem 1.5rem 3rem;
+  }
+}
+
+
+// =============================================
+// CATEGORY QUICK NAV
+// =============================================
+
+.category-nav {
+  background: $white;
+  border-bottom: 1px solid $border;
+  position: sticky;
+  top: $header-h;
+  z-index: 50;
+
+  &-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar { display: none; }
+  }
+}
+
+.cat-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $mid-gray;
+  padding: 1.1rem 1.5rem;
+  border-bottom: 2.5px solid transparent;
+  transition: all $transition;
+  white-space: nowrap;
+
+  &:hover { color: $charcoal; border-bottom-color: $light-gray; }
+  &.active { color: $forest; border-bottom-color: $forest; }
+}
+
+
+// =============================================
+// SERVICE CATEGORIES
+// =============================================
+
+.service-category {
+  padding: 5rem 2rem;
+
+  &.alt-bg { background: $sage-light; }
+
+  @media (max-width: 768px) { padding: 4rem 1.5rem; }
+  @media (max-width: 480px) { padding: 3rem 1.25rem; }
+}
+
+.category-inner {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &.reverse {
+    grid-template-columns: 1fr 0.75fr;
+
+    .category-header-img { order: 2; }
+    .category-content { order: 1; }
+  }
+
+  @media (max-width: 1024px) { gap: 2.5rem; }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    &.reverse {
+      .category-header-img { order: 0; }
+      .category-content { order: 0; }
+    }
+  }
+}
+
+.category-header-img {
+  border-radius: $radius-lg;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  box-shadow: $shadow-hover;
+  position: sticky;
+  top: calc(#{$header-h} + 64px);
+
+  img { width: 100%; height: 100%; object-fit: cover; }
+
+  @media (max-width: 768px) {
+    position: relative;
+    top: auto;
+    aspect-ratio: 16/9;
+    max-height: 260px;
+  }
+}
+
+.cat-img-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(28,28,28,0.75) 0%, transparent 60%);
+  padding: 2rem 1.5rem 1.5rem;
+
+  span {
+    font-family: $font-heading;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: $white;
+  }
+}
+
+.category-title-block {
+  margin-bottom: 2.5rem;
+
+  h2 { margin: 0.4rem 0 0.75rem; }
+
+  &.centered {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .category-desc { margin: 0 auto; }
+  }
+}
+
+.category-desc { max-width: 480px; }
+
+
+// =============================================
+// SERVICE LIST
+// =============================================
+
+.service-list { display: flex; flex-direction: column; }
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid $border;
+  transition: background $transition;
+
+  &:last-child { border-bottom: none; }
+
+  &:hover {
+    background: rgba(232,243,232,0.3);
+    margin: 0 -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: $radius-sm;
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+}
+
+.service-info {
+  flex: 1;
+
+  h3 { color: $charcoal; font-size: 1rem; margin-bottom: 0.25rem; }
+  p  { font-size: 0.82rem; color: $mid-gray; }
+}
+
+.service-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+
+  @media (max-width: 768px) { width: 100%; justify-content: space-between; }
+}
+
+.price {
+  font-family: $font-heading;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: $forest;
+  min-width: 48px;
+  text-align: right;
+}
+
+.duration {
+  font-family: $font-micro;
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: $light-gray;
+  min-width: 40px;
+}
+
+.book-btn {
+  display: inline-block;
+  background: transparent;
+  color: $forest;
+  font-family: $font-body;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 9px 18px;
+  border-radius: $radius-sm;
+  border: 1.5px solid $forest;
+  cursor: pointer;
+  transition: all $transition;
+  white-space: nowrap;
+
+  &:hover, &.large { background: $forest; color: $white; }
+  &.large { padding: 14px 28px; font-size: 0.82rem; }
+}
+
+
+// =============================================
+// BUNDLES
+// =============================================
+
+.bundles-inner { max-width: 1200px; margin: 0 auto; }
+
+.bundles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @media (max-width: 1024px) { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 768px)  { grid-template-columns: 1fr; }
+}
+
+.bundle-card {
+  background: $white;
+  border-radius: $radius-md;
+  padding: 2.5rem 2rem;
+  box-shadow: $shadow-card;
+  border-top: 3px solid $border;
+  position: relative;
+  transition: transform $transition, box-shadow $transition;
+
+  &:hover { transform: translateY(-4px); box-shadow: $shadow-hover; }
+  &.featured { border-top-color: $forest; }
+
+  h3 { font-size: 1.3rem; color: $charcoal; margin-bottom: 0.3rem; }
+}
+
+.bundle-badge {
+  position: absolute;
+  top: -1px; right: 1.5rem;
+  background: $forest;
+  color: $white;
+  font-family: $font-micro;
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 0 0 $radius-sm $radius-sm;
+}
+
+.bundle-desc { font-size: 0.82rem; color: $forest; font-weight: 600; margin-bottom: 1.25rem; }
+
+.bundle-includes {
+  list-style: none;
+  margin-bottom: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  li {
+    font-size: 0.82rem;
+    color: $mid-gray;
+    padding-left: 1.2rem;
+    position: relative;
+
+    &::before { content: '✓'; position: absolute; left: 0; color: $forest; font-weight: 700; }
+  }
+}
+
+.bundle-pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.bundle-was { font-size: 1rem; color: $light-gray; text-decoration: line-through; }
+.bundle-now { font-family: $font-heading; font-size: 2rem; font-weight: 700; color: $forest; }
