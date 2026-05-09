@@ -5,22 +5,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&family=Lato:ital@1&display=swap" rel="stylesheet">
-		<style>
-			:root {
-				--bg-primary: #FAF9F6; --accent-soft: #E8F3E8; 
-				--action-green: #2D4F1E; --heading-dark: #1C1C1C; --skin-blush: #F4E1D2;
-			}
-			body, input, select, textarea { font-family: 'Montserrat', sans-serif; background-color: var(--bg-primary); color: var(--heading-dark); }
-			h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; color: var(--heading-dark) !important; text-transform: none !important; letter-spacing: 0 !important; }
-			#banner.major { background-color: var(--skin-blush); color: var(--heading-dark); height: 75vh; }
-			#banner h1 { font-size: 3.5rem; line-height: 1.2; }
-			.button.primary, input[type="submit"].primary { background-color: var(--action-green) !important; box-shadow: none; color: #fff !important; }
-			#one.tiles article { background-color: var(--accent-soft); }
-			#header.alt { background-color: transparent; border-bottom: none; }
-			#header { background: var(--bg-primary); }
-			.contact-method h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
-		</style>
 	</head>
 	<body class="is-preload">
 		<div id="wrapper">
@@ -32,11 +19,12 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="landing.html">Services</a></li>
-					<li><a href="generic.html">About & Hygiene</a></li>
+					<li><a href="landing.html">Service Menu</a></li>
+					<li><a href="generic.html">Hygiene Standards</a></li>
+					<li><a href="elements.html">Style Guide</a></li>
 				</ul>
 				<ul class="actions stacked">
-					<li><a href="#" class="button primary fit">Book Now</a></li>
+					<li><a href="https://booking-link.com" class="button primary fit">Book Appointment</a></li>
 				</ul>
 			</nav>
 
@@ -46,9 +34,9 @@
 						<h1>Precision Waxing for the Modern Chicago Woman.</h1>
 					</header>
 					<div class="content">
-						<p>Experience a new standard of hygiene and comfort in the heart of Illinois. <br />Sanitised. Professional. Pain-conscious.</p>
+						<p>Experience a new standard of hygiene and comfort. <br />Sanitized. Professional. Pain-conscious.</p>
 						<ul class="actions">
-							<li><a href="https://booking-link.com" class="button next scrolly">Book Your Glow-Up</a></li>
+							<li><a href="https://booking-link.com" class="button next">Book Your Glow-Up</a></li>
 						</ul>
 					</div>
 				</div>
@@ -60,14 +48,14 @@
 						<span class="image"><img src="images/intimate.jpg" alt="Intimate Waxing" /></span>
 						<header class="major">
 							<h3><a href="landing.html" class="link">Intimate</a></h3>
-							<p>Brazilian & Bikini Specialist</p>
+							<p>Brazilian & Bikini Specialists</p>
 						</header>
 					</article>
 					<article>
 						<span class="image"><img src="images/body.jpg" alt="Body Waxing" /></span>
 						<header class="major">
 							<h3><a href="landing.html" class="link">Body & Limbs</a></h3>
-							<p>Smooth skin from head to toe</p>
+							<p>Silky smooth results for every body</p>
 						</header>
 					</article>
 					<article>
@@ -78,10 +66,10 @@
 						</header>
 					</article>
 					<article>
-						<span class="image"><img src="images/safety.jpg" alt="Hygiene Standards" /></span>
+						<span class="image"><img src="images/hygiene.jpg" alt="Hygiene Standards" /></span>
 						<header class="major">
-							<h3><a href="generic.html" class="link">The Hygiene Pillar</a></h3>
-							<p>Our "No Double Dipping" Promise</p>
+							<h3><a href="generic.html" class="link">Hygiene Promise</a></h3>
+							<p>Exceeding Illinois Health Standards</p>
 						</header>
 					</article>
 				</section>
@@ -91,9 +79,9 @@
 						<header class="major">
 							<h2>Your Safety is Our Baseline</h2>
 						</header>
-						<p>We strictly adhere to Illinois Department of Health standards. Using only premium hard wax and medical-grade sanitization, we ensure your appointment is as comfortable as it is sterile. No shortcuts, just skin you'll love.</p>
+						<p>We strictly adhere to a "No Double Dipping" policy and utilize medical-grade sanitization for every client. Using only premium hard wax, we ensure your appointment is as comfortable as it is sterile. No shortcuts, just skin you'll love.</p>
 						<ul class="actions">
-							<li><a href="landing.html" class="button next">View Service Menu</a></li>
+							<li><a href="landing.html" class="button next">View Full Service Menu</a></li>
 						</ul>
 					</div>
 				</section>
@@ -102,7 +90,6 @@
 			<section id="contact">
 				<div class="inner">
 					<section>
-						<header class="major"><h2>Get in Touch</h2></header>
 						<form method="post" action="#">
 							<div class="fields">
 								<div class="field half"><label for="name">Name</label><input type="text" name="name" id="name" /></div>
@@ -115,20 +102,27 @@
 						</form>
 					</section>
 					<section class="split">
-						<section><div class="contact-method"><span class="icon solid alt fa-envelope"></span><h3>Email</h3><a href="#">hello@chicagowax.com</a></div></section>
+						<section><div class="contact-method"><span class="icon solid alt fa-envelope"></span><h3>Email</h3><a href="#">hello@chicagostudio.com</a></div></section>
 						<section><div class="contact-method"><span class="icon solid alt fa-phone"></span><h3>Text or Call</h3><span>(312) 555-WAX1</span></div></section>
-						<section><div class="contact-method"><span class="icon solid alt fa-home"></span><h3>Studio Address</h3><span>123 N. Michigan Ave, Suite 400<br />Chicago, IL 60601</span></div></section>
+						<section><div class="contact-method"><span class="icon solid alt fa-home"></span><h3>Address</h3><span>123 N. Michigan Ave, Suite 400<br />Chicago, IL 60601</span></div></section>
 					</section>
 				</div>
 			</section>
 
 			<footer id="footer">
 				<div class="inner">
-					<ul class="copyright"><li>&copy; [Studio Name] Chicago</li><li>99% Women-Owned & Operated</li></ul>
+					<ul class="copyright"><li>&copy; [Studio Name]</li><li>Locally Owned in Chicago</li></ul>
 				</div>
 			</footer>
 		</div>
+
 		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/custom.js"></script>
 	</body>
 </html>
